@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63f0ffb5-876a-4f6a-8017-9c21ace769bb" name="Default Changelist" comment="second project">
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/FirstTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/FourthTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/SecondTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/TaskFive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/TaskSeven.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/TaskSix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignmentStatements303_4_1/ThirdTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GuiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuiApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MathClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MathClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScannerPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScannerPractice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
