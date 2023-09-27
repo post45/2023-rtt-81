@@ -1,6 +1,6 @@
 package lesson_303_5.glab_303_5_1;
 
-public class Loopdemone {
+public class Loopdemoone {
 	public static void main(String[] args) {
 		int n = 5;
 		// for loop
