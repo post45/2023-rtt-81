@@ -22,6 +22,7 @@ public class OrderDAO {
 		
 		try {
 			Order result = query.getSingleResult();
+			session.close();
 			return result;
 		} catch (NoResultException nre) {
 			return null;
@@ -30,12 +31,15 @@ public class OrderDAO {
 
 	public List<Order> findByCustomerId(Integer customerId) {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
-		Session session = factory.openSession();  
-		String hql = "From Order o WHERE o.customerId = :customerId";
+		Session session = factory.openSession();
+//		Customer customer = new Customer();
+//		customer.setId(customerId);
+		String hql = "From Order o WHERE o.customer.id = :customerId";
 		TypedQuery<Order> query = session.createQuery(hql, Order.class);
+//		query.setParameter("customerObj",  customer);
 		query.setParameter("customerId",  customerId);
-		
 		List<Order> result = query.getResultList();
+		session.close();
 		return result;
 	}
 	

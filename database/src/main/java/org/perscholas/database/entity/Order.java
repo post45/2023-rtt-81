@@ -13,12 +13,12 @@ public class Order {
 	@Column(name = "id")
 	private Integer id;
 	@OneToMany(mappedBy = "order",
-			fetch = FetchType.LAZY,
+			fetch = FetchType.EAGER,
 			cascade = CascadeType.ALL)
 	private List<OrderDetail> ordersDetail;
 
-	@Column(name = "customer_id", insertable = false, updatable = false)
-	private Integer customerId;
+//	@Column(name = "customer_id", insertable = false, updatable = false)
+//	private Integer customerId;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "customer_id", nullable = false)
@@ -50,13 +50,13 @@ public class Order {
 		this.id = id;
 	}
 
-	public Integer getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
-	}
+//	public Integer getCustomerId() {
+//		return customerId;
+//	}
+//
+//	public void setCustomerId(Integer customerId) {
+//		this.customerId = customerId;
+//	}
 
 	public Date getOrderDate() {
 		return orderDate;
@@ -114,12 +114,12 @@ public class Order {
 		this.ordersDetail = ordersDetail;
 	}
 
-	@Override
-	public String toString() {
-		return "\nOrder [id=" + id + ", customerId=" + customerId + ", customer=" + customer + ", orderDate=" + orderDate
-				+ ", requiredDate=" + requiredDate + ", shippedDate=" + shippedDate + ", status=" + status
-				+ ", comments=" + comments + "]\n\n";
-	}
+//	@Override
+//	public String toString() {
+//		return "\nOrder [id=" + id + ", customerId=" + customer.getId() + ", customer=" + customer.getCustomerName() + ", orderDate=" + orderDate
+//				+ ", requiredDate=" + requiredDate + ", shippedDate=" + shippedDate + ", status=" + status
+//				+ ", comments=" + comments + "]\n\n";
+//	}
 
 	
 	

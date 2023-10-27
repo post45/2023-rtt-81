@@ -19,17 +19,17 @@ public class OrderDetail {
 	@Column(name = "id")
 	private Integer id;
 
-	@Column(name = "order_id", insertable = false, updatable = false)
-	private Integer orderId;
+//	@Column(name = "order_id", insertable = false, updatable = false)
+//	private Integer orderId;
 
-	@ManyToOne(fetch = FetchType.EAGER, optional = false)
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "order_id", nullable = false)
 	private Order order;
 
-	@Column(name = "product_id", insertable = false, updatable = false)
-	private Integer productId;	
+//	@Column(name = "product_id", insertable = false, updatable = false)
+//	private Integer productId;
 
-	@ManyToOne(fetch = FetchType.EAGER, optional = false)
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "product_id", nullable = false)
 	private Product product;
 	
@@ -37,7 +37,7 @@ public class OrderDetail {
 	private Integer quantityOrdered;	
 
 	@Column(name = "price_each", columnDefinition = "decimal(10,2)")
-	private String priceEach;		 
+	private Double priceEach;
 
 	@Column(name = "order_line_number"  )
 	private Short orderLineNumber;
@@ -50,21 +50,21 @@ public class OrderDetail {
 		this.id = id;
 	}
 
-	public Integer getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(Integer orderId) {
-		this.orderId = orderId;
-	}
-
-	public Integer getProductId() {
-		return productId;
-	}
-
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
+//	public Integer getOrderId() {
+//		return orderId;
+//	}
+//
+//	public void setOrderId(Integer orderId) {
+//		this.orderId = orderId;
+//	}
+//
+//	public Integer getProductId() {
+//		return productId;
+//	}
+//
+//	public void setProductId(Integer productId) {
+//		this.productId = productId;
+//	}
 
 	public Integer getQuantityOrdered() {
 		return quantityOrdered;
@@ -74,11 +74,11 @@ public class OrderDetail {
 		this.quantityOrdered = quantityOrdered;
 	}
 
-	public String getPriceEach() {
+	public Double getPriceEach() {
 		return priceEach;
 	}
 
-	public void setPriceEach(String priceEach) {
+	public void setPriceEach(Double priceEach) {
 		this.priceEach = priceEach;
 	}
 
@@ -100,7 +100,7 @@ public class OrderDetail {
 
 	@Override
 	public String toString() {
-		return "\n\nOrderDetails [id=" + id + ", orderId=" + orderId + ", productId=" + productId +  ", quantityOrdered=" + quantityOrdered + ", priceEach=" + priceEach + ", orderLineNumber="
+		return "\n\nOrderDetails [id=" + id +   ", quantityOrdered=" + quantityOrdered + ", priceEach=" + priceEach + ", orderLineNumber="
 				+ orderLineNumber + "]";
 	}
 
